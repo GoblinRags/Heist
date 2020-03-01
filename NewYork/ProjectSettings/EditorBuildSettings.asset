@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Assignment4.unity
-    guid: df5d30c572b4f9843978a1406482d8ef
+    path: Assets/Heist/Sandbox.unity
+    guid: 0084056e54d32b443bf08eb7a9a3c556
   m_configObjects: {}

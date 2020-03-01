@@ -21,6 +21,7 @@
       <Path>Builds</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+      <Path>MidtermBuild</Path>
       <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>

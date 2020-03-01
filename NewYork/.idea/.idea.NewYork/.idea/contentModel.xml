@@ -7,26 +7,35 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AudioManager.cs" t="Include" />
-        <e p="Bat.cs" t="Include" />
-        <e p="ChangeFOV.cs" t="Include" />
-        <e p="CreateGravity.cs" t="Include" />
-        <e p="FirstPerson.cs" t="Include" />
-        <e p="GameOver.cs" t="Include" />
-        <e p="GetSmaller.cs" t="Include" />
-        <e p="MakeItRain.cs" t="Include" />
-        <e p="MovementExamples.cs" t="Include" />
-        <e p="PlayerLogic2.cs" t="Include" />
+        <e p="FirstPersonMovement.cs" t="Include" />
+        <e p="MouseLook.cs" t="Include" />
+        <e p="RaycastGrounded.cs" t="Include" />
+        <e p="RaycastGun.cs" t="Include" />
+        <e p="RaycastMouse.cs" t="Include" />
+        <e p="RaycastRoomba.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="AudioManager.cs" t="Include" />
           <e p="BasicMovement.cs" t="Include" />
+          <e p="Bat.cs" t="Include" />
+          <e p="ChangeFOV.cs" t="Include" />
+          <e p="CreateGravity.cs" t="Include" />
+          <e p="FirstPerson.cs" t="Include" />
+          <e p="GameOver.cs" t="Include" />
+          <e p="GetSmaller.cs" t="Include" />
           <e p="Items.cs" t="Include" />
           <e p="LavaLampLights.cs" t="Include" />
+          <e p="MakeItRain.cs" t="Include" />
+          <e p="MovementExamples.cs" t="Include" />
           <e p="PlayerLogic.cs" t="Include" />
+          <e p="PlayerLogic2.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="ShowObjectDelay.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="TypewriterEffect.cs" t="Include" />
+          <e p="Weighted.cs" t="Include" />
         </e>
-        <e p="ShowObjectDelay.cs" t="Include" />
+        <e p="ShootMoney.cs" t="Include" />
+        <e p="Targetable.cs" t="Include" />
         <e p="TutorialInfo" t="Include">
           <e p="Scripts" t="Include">
             <e p="Editor" t="Include">
@@ -35,7 +44,6 @@
             <e p="Readme.cs" t="Include" />
           </e>
         </e>
-        <e p="Weighted.cs" t="Include" />
       </e>
       <e p="NewYork.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
