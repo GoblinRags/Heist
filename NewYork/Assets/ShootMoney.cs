@@ -79,13 +79,14 @@ public class ShootMoney : MonoBehaviour
                 rb.velocity = BillSpeed * Spawner.transform.up;
             }
 
-            bill.transform.localPosition += dir.normalized * 2f;
+            bill.transform.localPosition += dir.normalized /2f;
         }
         else
         {
             rb.velocity = BillSpeed * Spawner.transform.up;
             //rb.velocity = BillSpeed * Camera.main.ScreenPointToRay(Input.mousePosition);
             bill.transform.localPosition += rb.velocity.normalized * .3f;
+            bill.transform.localPosition += rb.velocity.normalized/2f;
         }
 
         

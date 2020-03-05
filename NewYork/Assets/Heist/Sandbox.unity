@@ -569,6 +569,11 @@ MonoBehaviour:
   GroundMask:
     serializedVersion: 2
     m_Bits: 1024
+  IsDash: 0
+  Dashing: 0
+  DashingTimer: 0
+  DashSpeed: 60
+  DashingRate: 0.15
 --- !u!114 &349908635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3292,7 +3297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da082f040501824ba293dd15f982805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BillSpeed: 20
+  BillSpeed: 30
   BillRaySpeed: 3
   BPS: 3
   BulletTimer: 0
