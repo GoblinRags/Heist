@@ -100,6 +100,7 @@ public class PlayerLogic2 : MonoBehaviour
 
     }
 
+    
     private void OnTriggerExit(Collider other)
     {
         //CanvasText.text = "";

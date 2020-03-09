@@ -13,6 +13,8 @@
         <e p="RaycastGun.cs" t="Include" />
         <e p="RaycastMouse.cs" t="Include" />
         <e p="RaycastRoomba.cs" t="Include" />
+        <e p="SandBoxDone.cs" t="Include" />
+        <e p="SandboxLogic.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AudioManager.cs" t="Include" />
           <e p="BasicMovement.cs" t="Include" />

@@ -6,6 +6,8 @@ using UnityEngine;
 public class Targetable : MonoBehaviour
 {
     public int Health = 1;
+
+    public Material ChangeMaterial;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,9 @@ public class Targetable : MonoBehaviour
             Health -= 1;
             if (Health <= 0)
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                GetComponent<MeshRenderer>().material = ChangeMaterial;
+
             }
             //create explosion hit and sfx
             //destroy object
