@@ -70,11 +70,24 @@ public class AudioManager : MonoBehaviour
     }
     
     //PLAY ONESHOT SOUND:
-    public void PlayOneShotSound(string soundName)
+    public void PlayOneShotSound(string soundName, bool change)
     {
-        if (AudioSources.TryGetValue(soundName, out OneShotAudioSource))
+        AudioSource audio;
+        if (AudioSources.TryGetValue(soundName, out audio))
         {
-            //OneShotAudioSource.PlayOneShot();
+            OneShotAudioSource.loop = audio.loop;
+            if (change)
+            {
+                OneShotAudioSource.pitch = Random.Range(0.75f, 1.25f);
+            }
+            else
+            {
+                OneShotAudioSource.pitch = audio.pitch;
+            }
+            
+            
+            OneShotAudioSource.volume = audio.volume;
+            OneShotAudioSource.PlayOneShot(audio.clip);
             //OneShotAudioSource.PlayOneShot(Eyes, );
         }
         //if not, send debug log

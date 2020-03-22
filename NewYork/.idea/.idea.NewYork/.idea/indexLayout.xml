@@ -23,6 +23,7 @@
       <Path>Logs</Path>
       <Path>MidtermBuild</Path>
       <Path>New folder</Path>
+      <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

@@ -12,6 +12,7 @@ TagManager:
   - ToFall
   - Ball
   - Cash
+  - Weighted
   layers:
   - Default
   - TransparentFX

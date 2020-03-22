@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ShootMoney : MonoBehaviour
 {
+    public TextMeshProUGUI CashUI;
+    public int CashAmount = 0;
     public float BillSpeed = 20f;
     public float BillRaySpeed = 5f;
     public float BPS = 3f;
@@ -29,6 +33,7 @@ public class ShootMoney : MonoBehaviour
     {
         RayGun = FindObjectOfType<RaycastGun>();
         CashGun = GetComponent<Transform>();
+        
     }
 
     // Update is called once per frame
@@ -45,6 +50,7 @@ public class ShootMoney : MonoBehaviour
             if (CanShoot)
             {
                 Shoot();
+                
                 BulletTimer = 0f;
             }
         }
@@ -66,20 +72,19 @@ public class ShootMoney : MonoBehaviour
 
     public void Shoot()
     {
-
         GameObject bill = Instantiate(BillPrefab, Spawner.transform.position, Quaternion.Euler(0f,90f, 0f));
         //bill.transform.parent = transform;
         Rigidbody rb = bill.GetComponent<Rigidbody>();
         if (RayGun.RaycastedObj != Vector3.zero)
         {
-            Vector3 dir = (RayGun.RaycastedObj - Spawner.transform.position);
+            Vector3 dir = (RayGun.RaycastedObj - Spawner.transform.position).normalized;
             rb.velocity = dir * BillRaySpeed;
             if (rb.velocity.magnitude < BillSpeed)
             {
                 rb.velocity = BillSpeed * Spawner.transform.up;
             }
 
-            bill.transform.localPosition += dir.normalized /2f;
+            bill.transform.localPosition += dir.normalized/2f;
         }
         else
         {
@@ -88,10 +93,34 @@ public class ShootMoney : MonoBehaviour
             bill.transform.localPosition += rb.velocity.normalized * .3f;
             bill.transform.localPosition += rb.velocity.normalized/2f;
         }
+        CashAmount += 10000;
+        //increase ui
+        CashUI.enabled = true;
 
-        
+        DisplayCash(CashAmount);
+        //CashUI.text = 
         //rb.angularVelocity = Random.insideUnitSphere * 30f;
         //rb.AddTorque(Random.insideUnitSphere.normalized * 100000f);
 
     }
+
+    void DisplayCash(int cash)
+    {
+        string cashString = cash.ToString();
+        string newString = cashString;
+        int places = 0;
+        for (int i = cashString.Length - 1; i >= 0; i--)
+        {
+            if (places == 3)
+            {
+                newString = newString.Insert(i + 1, ",");
+                places = 0;
+            }
+            places += 1;
+        }
+
+        newString = newString.Insert(0, "$");
+        CashUI.text = newString;
+    }
+    
 }
